@@ -124,7 +124,7 @@ if (isset($_GET['logout'])) {
             
             <div class="feature">
                 <h4>✅ Tokens Expiráveis</h4>
-                <p>Os tokens de redefinição de senha expiram após 15 minutos.</p>
+                <p>Os tokens de redefinição de senha expiram após 30 segundos.</p>
             </div>
             
             <div class="feature">

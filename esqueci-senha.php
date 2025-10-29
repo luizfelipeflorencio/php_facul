@@ -26,8 +26,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $token = bin2hex(random_bytes(32));
             $token_hash = password_hash($token, PASSWORD_DEFAULT);
             
-            // Set expiration time (5 minutes from now)
-            $expiracao = date('Y-m-d H:i:s', strtotime('+5 minutes'));
+            // Set expiration time (30 seconds from now)
+            $expiracao = date('Y-m-d H:i:s', strtotime('+30 seconds'));
             
             // Store token in database
             $stmt = $pdo->prepare("INSERT INTO tokens_reset_senha (id_usuario, token_hash, data_expiracao) VALUES (?, ?, ?)");

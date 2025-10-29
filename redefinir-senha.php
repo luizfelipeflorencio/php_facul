@@ -177,7 +177,7 @@ if ($token_valid && $_SERVER['REQUEST_METHOD'] == 'POST') {
         <?php endif; ?>
         
         <?php if ($token_valid): ?>
-            <div id="timer">Você tem <span id="countdown">--:--</span> (5 minutos) para redefinir sua senha.</div>
+            <div id="timer">Você tem <span id="countdown">--</span> segundos para redefinir sua senha.</div>
             
             <form method="POST" id="reset-form">
                 <div class="form-group">
@@ -202,7 +202,7 @@ if ($token_valid && $_SERVER['REQUEST_METHOD'] == 'POST') {
     <?php if ($token_valid && $expiracao_timestamp): ?>
     <script>
         // Pass expiration time to JavaScript
-        const expirationTime = <?php echo $expiracao_timestamp; ?> * 1000; // Convert to milliseconds
+        const expirationTime = <?php echo $expiracao_timestamp; ?> * 1000; 
         const countdownElement = document.getElementById('countdown');
         const resetForm = document.getElementById('reset-form');
         
@@ -210,16 +210,15 @@ if ($token_valid && $_SERVER['REQUEST_METHOD'] == 'POST') {
             const now = new Date().getTime();
             const distance = expirationTime - now;
             
-            // Calculate minutes and seconds
-            const minutes = Math.floor(distance / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Calculate seconds only
+            const seconds = Math.floor(distance / 1000);
             
             // Display the result
             if (distance >= 0) {
-                countdownElement.textContent = minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0');
+                countdownElement.textContent = seconds.toString();
             } else {
                 // Timer expired
-                countdownElement.textContent = '00:00';
+                countdownElement.textContent = '0';
                 resetForm.classList.add('hidden');
                 document.querySelector('.message').innerHTML = 'Token expirado. Por favor, solicite um novo link.';
                 document.querySelector('.message').className = 'message error';

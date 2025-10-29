@@ -21,7 +21,7 @@ Este é um sistema de autenticação de usuários desenvolvido em PHP com as seg
 
 4. **Redefinição de Senha com Timer**
    - Formulário de redefinição protegido por token
-   - Contagem regressiva em JavaScript mostrando tempo restante
+   - Contagem regressiva em JavaScript mostrando tempo restante (30 segundos)
    - Tokens de uso único com expiração automática
 
 ## Requisitos
@@ -34,15 +34,15 @@ Este é um sistema de autenticação de usuários desenvolvido em PHP com as seg
 
 1. **Configurar o Banco de Dados**
    - Crie um banco de dados MySQL chamado `auth_system`
-   - Atualize as credenciais no arquivo [config.php](file:///c%3A/Users/ffeli/Downloads/php_facul/config.php) se necessário
+   - Atualize as credenciais no arquivo [config.php](localhost/php_facul/config.php) se necessário
 
 2. **Inicializar as Tabelas**
-   - Execute o script [init_db.php](file:///c%3A/Users/ffeli/Downloads/php_facul/init_db.php) para criar as tabelas necessárias
-   - Ou execute o script SQL manualmente: [database_schema.sql](file:///c%3A/Users/ffeli/Downloads/php_facul/database_schema.sql)
+   - Execute o script [init_db.php](localhost/Downloads/php_facul/init_db.php) para criar as tabelas necessárias
+   - Ou execute o script SQL manualmente: [database_schema.sql](localhost/php_facul/database_schema.sql)
 
 3. **Iniciar o Servidor**
    - Coloque os arquivos em um servidor web
-   - Acesse [registrar.php](file:///c%3A/Users/ffeli/Downloads/php_facul/registrar.php) para começar
+   - Acesse [registrar.php](localhost/php_facul/registrar.php) para começar
 
 ## Estrutura do Banco de Dados
 
@@ -78,17 +78,17 @@ tokens_reset_senha (
 
 ## Arquivos
 
-- [config.php](file:///c%3A/Users/ffeli/Downloads/php_facul/config.php) - Configuração do banco de dados
-- [init_db.php](file:///c%3A/Users/ffeli/Downloads/php_facul/init_db.php) - Script de inicialização do banco de dados
-- [registrar.php](file:///c%3A/Users/ffeli/Downloads/php_facul/registrar.php) - Página de registro
-- [login.php](file:///c%3A/Users/ffeli/Downloads/php_facul/login.php) - Página de login
-- [esqueci-senha.php](file:///c%3A/Users/ffeli/Downloads/php_facul/esqueci-senha.php) - Página de recuperação de senha
-- [redefinir-senha.php](file:///c%3A/Users/ffeli/Downloads/php_facul/redefinir-senha.php) - Página de redefinição de senha com timer
-- [dashboard.php](file:///c%3A/Users/ffeli/Downloads/php_facul/dashboard.php) - Área restrita após login
+- [config.php](/php_facul/config.php) - Configuração do banco de dados
+- [init_db.php](/php_facul/init_db.php) - Script de inicialização do banco de dados
+- [registrar.php](/php_facul/registrar.php) - Página de registro
+- [login.php](/php_facul/login.php) - Página de login
+- [esqueci-senha.php](/php_facul/esqueci-senha.php) - Página de recuperação de senha
+- [redefinir-senha.php](/php_facul/redefinir-senha.php) - Página de redefinição de senha com timer
+- [dashboard.php](/php_facul/dashboard.php) - Área restrita após login
 
 ## Como Usar
 
-1. Acesse [registrar.php](file:///c%3A/Users/ffeli/Downloads/php_facul/registrar.php) para criar uma conta
-2. Faça login em [login.php](file:///c%3A/Users/ffeli/Downloads/php_facul/login.php)
-3. Acesse o dashboard em [dashboard.php](file:///c%3A/Users/ffeli/Downloads/php_facul/dashboard.php)
-4. Teste a recuperação de senha em [esqueci-senha.php](file:///c%3A/Users/ffeli/Downloads/php_facul/esqueci-senha.php)
+1. Acesse [registrar.php](localhost/php_facul/registrar.php) para criar uma conta
+2. Faça login em [login.php](localhost/php_facul/login.php)
+3. Acesse o dashboard em [dashboard.php](localhost/php_facul/dashboard.php)
+4. Teste a recuperação de senha em [esqueci-senha.php](localhost/php_facul/esqueci-senha.php)
